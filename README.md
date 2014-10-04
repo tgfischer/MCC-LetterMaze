@@ -1,4 +1,4 @@
-MCC-LetterMaze
+Microsoft Coding Challenge - Letter Maze
 ==============
 
 This was one of the problems that was my team was asked during the Microsoft Coding Challenge at Western University in September. Unfortunately, my team did not finish this problem within the time frame. However, I decided to complete the problem at home on my own time anyways. Here is what was given to us:
