@@ -13,10 +13,23 @@ namespace Letter_Maze
         public Node PreviousLetter;
         public int Index;
 
-        public Node(int x, int y, int index, char letter) : base(x, y)
+        public Node(int x, int y, int index, char letter) 
+            : base(x, y)
         {
             this.Letter = letter;
             this.Index = index;
+        }
+
+        public Node(int x, int y, int index, char letter, Node previousNode)
+            : this(x, y, index, letter)
+        {
+            this.PreviousLetter = previousNode;
+        }
+
+        public Node(int x, int y, int index, char letter, char nextLetter)
+            : this(x, y, index, letter)
+        {
+            this.NextLetter = nextLetter;
         }
     }
 }

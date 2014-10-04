@@ -15,7 +15,7 @@ namespace Letter_Maze
             this.Items = new LinkedList<Node>();
         }
 
-        public Node Contains(int x, int y)
+        public Node Remove(int x, int y)
         {
             foreach (Node node in this.Items)
             {

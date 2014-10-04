@@ -24,9 +24,7 @@ namespace Letter_Maze
                     grid.Add(new char[line.Length]);
 
                     for (int j = 0; j < line.Length; j++)
-                    {
                         grid.ElementAt(i)[j] = line.ElementAt(j);
-                    }
                 }
             }
 
@@ -37,11 +35,11 @@ namespace Letter_Maze
 
         static void BreadthFirstSearch(List<char[]> grid, String phrase)
         {
-            Point[] DIRECTION = new Point[] { new Point(0, 1), new Point(1, 0), new Point(0, -1), new Point(-1, 0) };
+            Point[] DIRECTION       = new Point[] { new Point(0, 1), new Point(1, 0), new Point(0, -1), new Point(-1, 0) };
             Queue<Node> activeFront = new Queue<Node>();
-            Node start = new Node(0, 0, 0, grid.ElementAt(0)[0]), end = null;
-            
-            start.NextLetter = phrase.ElementAt(1);
+            Node start              = new Node(0, 0, 0, grid.ElementAt(0)[0], phrase.ElementAt(1)), 
+                 end                = null;
+         
             activeFront.Enqueue(start);
 
             while (activeFront.Count != 0 && end == null) 
@@ -58,8 +56,7 @@ namespace Letter_Maze
 
                     if (neighbour == node.NextLetter)
                     {
-                        Node next = new Node(node.X + DIRECTION[j].X, node.Y + DIRECTION[j].Y, node.Index + 1, neighbour);
-                        next.PreviousLetter = node;
+                        Node next = new Node(node.X + DIRECTION[j].X, node.Y + DIRECTION[j].Y, node.Index + 1, neighbour, node);
 
                         if (next.X == grid.ElementAt(0).Length - 1 && next.Y == grid.Count - 1)
                         {
@@ -74,6 +71,7 @@ namespace Letter_Maze
             }
 
             if (end != null) DrawPath(start, end, grid);
+            else             Console.WriteLine("Something went terribly wrong...");
         }
 
         private static void DrawPath(Node start, Node end, List<char[]> grid)
@@ -82,21 +80,16 @@ namespace Letter_Maze
             path.Items.AddLast(end);
 
             while (path.Items.Last() != start)
-            {
                 path.Items.AddLast(path.Items.Last().PreviousLetter);
-            }
-
-            path.Items.AddLast(start);
-
 
             for (int i = 0; i < grid.Count; i++)
             {
                 for (int j = 0; j < grid.ElementAt(0).Length; j++)
                 {
-                    Node node = path.Contains(j, i);
+                    Node node = path.Remove(j, i);
 
                     if (node == null) Console.Write('.');
-                    else Console.Write(node.Letter);
+                    else              Console.Write(node.Letter);
                 }
 
                 Console.Write("\n");
