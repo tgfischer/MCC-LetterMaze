@@ -126,9 +126,12 @@ for (int i = 0; i < grid.Count; i++)
 }
 ```
 
+Example
+--------------
+
 Here is an example from `2.3.txt`, the largest input file I was provided with
 
-Input
+### Input
 ```
 MNGFBQVJSGUEPOWVRXMIYUOPQLMUJARPPSLBHOOCFPTAXJVFOCWOQWGRZQPQDBZSPEPWCVOCIKDJAOSHPHFGDCYSLUCRZYYDPBKSTYDTOUFGTXQLXHAWVTOMGWLISXDK
 MNGNAARNAIBFZAAHSKOTSIQZVRICDGZFTVJWTTOOXPAJKY
@@ -156,7 +159,7 @@ SRMEQYKLYWGPBQYOQSBBSMRAXWFKURJTCVGRBDPMSQIIXD
 JMKTLEIGQAWGALGUTZQGMMNGJGMMCPJBDIRLLLZQJCDBYK
 ```
 
-Output
+### Output
 ```
 MNG...........................................
 ..F...........................................
