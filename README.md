@@ -112,7 +112,6 @@ while (path.Items.Last() != start)
 
 path.Items.AddLast(start);
 
-
 for (int i = 0; i < grid.Count; i++)
 {
     for (int j = 0; j < grid.ElementAt(0).Length; j++)
@@ -127,4 +126,60 @@ for (int i = 0; i < grid.Count; i++)
 }
 ```
 
+Here is an example from `2.3.txt`, the largest input file I was provided with
+
+Input
+```
+MNGFBQVJSGUEPOWVRXMIYUOPQLMUJARPPSLBHOOCFPTAXJVFOCWOQWGRZQPQDBZSPEPWCVOCIKDJAOSHPHFGDCYSLUCRZYYDPBKSTYDTOUFGTXQLXHAWVTOMGWLISXDK
+MNGNAARNAIBFZAAHSKOTSIQZVRICDGZFTVJWTTOOXPAJKY
+NAFFXIFGAPMSKWLAHQBRSPRVNJNFNNGQDJDAYQDOXBFAJC
+XQBETGOYUIOKWERNUATNIWOBSLBRNNURKQMLMILGZHVVUT
+DVUYPTXHRRNNWLIFWKHOXAFSGBMPNOAATGZHHTXTXJSZYX
+SJPXCBCWOGWSYBROHIUDQMTPLBYDNNRNIGTJLOMMLEMMKG
+GUEPOJFBJMOPPIMDZXJVFOCLACZJBPHFGISLKRHICSVIRM
+AGFEWSSBDBCYTXHFMADMJMWOQULXBWPRDCYUCYSHTTGXVM
+WUGIVRKXGZNKRTAFPTDQPJZGWZSPEPHSOAESRYDPJEIATJ
+WHIRVXCVISWDYPNCLJRFXYPRDBQDKWIKDJHTZYPDXNPYHQ
+QXIRPMBGSQLVSUOOOEVSCRWZQQQFHCCBEYWEYTBJQDPCVO
+ICVQKIYUOPMPPBHCLULGKIMQPUUJDVOBAGJIDSKVDSSXWB
+RCSSQNQHALURSLNEKVUUQJJPHAOBPFZGRYRFTOOSTESPVH
+EBCPNBYNBJJACINHUROQCLNJQCTHQSCQBAOCFUKFXYOOGM
+FHWJSGYCPBMKTVLAVFKGKKIBULXOTPCOEBEIGTXQGKPJTA
+BZNEIPUXCIDABVZUOHJKIZZYFSRDTLQAMKIINQCLITWNTK
+EZIJLVIAJRBAPYPYRERSCNQMQHYEAQLMGNBSITHXHAPHAD
+SHIYRMKCSWAIQIWTEXEZSFPTBXXQXWBKCKXFHIGRVWQNTQ
+FFKJLACSDAKMRPWUPTEVUPFFKRLWQNIEMZOWMNEXTTIHBZ
+LNSMMBWJXVQZEYUOGBQRFARBAHCPHCLIDGZDTJDLOLVOEY
+WHOKINGQJUKWRLFYHBVJHWYZQVWXEGJLNDEZNEZOMGWFRT
+MPHCXYMEUTVQAJPUNQILDKZJOHGLCCGEPCMKJSYZRBLISP
+SRMEQYKLYWGPBQYOQSBBSMRAXWFKURJTCVGRBDPMSQIIXD
+JMKTLEIGQAWGALGUTZQGMMNGJGMMCPJBDIRLLLZQJCDBYK
+```
+
+Output
+```
+MNG...........................................
+..F...........................................
+.QB...........................................
+.V............................................
+SJ............................................
+GUEPO............XJVFOC.......HFG.SL..........
+....W............A....WOQ.....P.DCYUC.........
+....VR.........FPT.....GWZSPEPHSOA..RYD.......
+.....X.........C.......RDB...WIKDJ..ZYP.......
+.....M...QL...OO.......ZQ....CC.....YTB.......
+.....IYUOPMPPBH........QP....VO.....DSK.......
+..........URSL......................TO........
+..........JA........................FU........
+....................................GTXQ......
+.......................................L......
+.......................................XHA....
+........................................VW....
+........................................T.....
+........................................O.....
+........................................MGW...
+..........................................LIS.
+............................................XD
+.............................................K
+```
 
